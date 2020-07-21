@@ -3,8 +3,11 @@ import Banner from "../../../../components/Banner";
 import Images from "../../../../constants/images";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function MainPage() {
+  const photos = useSelector((state: any) => state.photos);
+
   return (
     <div className="photo-main">
       <Banner title="Your awesome photos" backgroundUrl={Images.PINK_BG} />
